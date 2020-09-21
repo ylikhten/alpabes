@@ -5,6 +5,11 @@
   "scripts": {
     "start": "node ./bin/www"
   },
+  
+  "engines": {
+	"npm": "~14.11.0",
+	"node": "~6.14.8"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
