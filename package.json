@@ -7,8 +7,8 @@
   },
   
   "engines": {
-	"npm": "~14.11.0",
-	"node": "~6.14.8"
+	"node": "~14.11.0",
+	"npm": "~6.14.8"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
