@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var ctrlMain = require('../controllers/main');
+var ctrlLessons = require('../controllers/lessons');
 
-/* GET home page */
-router.get('/', ctrlMain.index);
+/* Home page + Lessons pages */
+router.get('/', ctrlLessons.home);
+router.get('/learn', ctrlLessons.learn);
+router.get('/practice', ctrlLessons.practice);
 
 module.exports = router;
