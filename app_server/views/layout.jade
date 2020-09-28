@@ -5,27 +5,19 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    .navbar.navbar-default.navbar-fixed-top
-      .container
-        .navbar-header
-          a.navbar-brand(href='/home') Alphabes
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        #navbar-main.navbar-collapse.collapse 
-          ul.nav.navbar-nav
-            li
-              a(href='/learn/') Learn
-          
-          
+    header
+      
+      h1 Alpabes -- Learn you some Hangul
+      a(href='/') Home
+      a(href='/learn') Learn
+      a(href='/practice') Practice
     .container
-      block content
-      footer
-        .row
-        .col-xs.12
-          small &copy; Grace and Yana 2020
+      .main-content
+        block content
+    footer
+      .row
+        col-xs.12
+          small &copy; grace and yana 2020
 
-    block content
     script(src='/javascripts/jquery-3.5.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
