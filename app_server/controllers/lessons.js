@@ -5,7 +5,7 @@ module.exports.home = function(req, res){
 
 /* GET 'Learn' page */
 module.exports.learn = function(req, res){
-	res.render('index', {title: 'Learn Hangul here'});
+	res.render('alphabet-list', {title: 'Learn Hangul'});
 };
 
 /* GET 'Practice' page */
