@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+	p #{title}
+
+
+	each character in characters
+		img(id="a0", src=character.src)
+		p #{character.name}
+
+	script.
+		function removeImg(){
+			this.style.display = "none";
+		}
+
+		document.getElementById("a0").addEventListener("click", removeImg);
+

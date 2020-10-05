@@ -1,9 +1,14 @@
-extends layout
-
-block content
-  h1= title
-
-  p 
-  | Welcome to #{title}
-
-  p What's the difference?
+doctype html
+html
+	head
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+	
+		block content
+			.container
+				.vertical-center
+					p Hi	
+					a(href='/') Home
+					a(href='/learn') Learn
+					a(href='/practice') Practice
