@@ -6,8 +6,10 @@ block content
 
 
 	each character in characters
-		img(id="a0", src=character.src)
-		p #{character.name}
+		div.letters
+			p #{character.name}
+			img(id="a0", src=character.src)
+			
 
 	script.
 		function removeImg(){
