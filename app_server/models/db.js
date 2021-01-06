@@ -1,14 +1,3 @@
-var mongoose = require('mongoose');
-
-var lessonSchema = new mongoose.Schema({
-	name: String,
-	pronunciation: String,
-	example: String,
-	src: String
-});
-
-mongoose.model('Lesson', lessonSchema);
-
 var dbURI = 'mongodb://localhost/alpabes';
 mongoose.connect(dbURI);
 
@@ -48,3 +37,5 @@ process.on('SIGTERM', function(){
 		process.exit(0);
 	});
 });
+
+require('./lessons');
