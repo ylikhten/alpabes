@@ -14,6 +14,7 @@ module.exports.home = function(req, res){
 module.exports.learn = function(req, res){
 	res.render('alphabet-learn', {
 		title: 'Learn Hangul',
+		menu: 'Learn',
 		characters: [{
 			name: 'Giyeok',
 			pronunciation: 'g/k',
@@ -51,5 +52,5 @@ module.exports.learn = function(req, res){
 
 /* GET 'Practice' page */
 module.exports.practice = function(req, res){
-	res.render('index', {title: 'Practice Hangul here'});
+	res.render('index', {title: 'Practice Hangul here', menu: 'Practice'});
 };

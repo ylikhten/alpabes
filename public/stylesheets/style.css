@@ -13,6 +13,7 @@ body {
   /*margin: auto;
   margin-top: 5px;
   text-align: center;*/
+  margin-top: 3px;
   width: 100%;
   height: 100%;
   position: relative;
@@ -34,12 +35,34 @@ h1 {
 }
 
 a {
-	text-decoration: none;
-	color: white;
-	background-color: #5F9EA0;
-	border-radius: 7px;
-	border: 2px solid #5F9EA0;
-	margin: 5px;
+  text-decoration: none;
+  color: #5F9EA0;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #5F9EA0;
+  margin: 5px;
+  padding: 3px;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: white;
+  background-color: #5F9EA0;
+  border-radius: 5px;
+  border: 2px solid #5F9EA0;
+  margin: 5px;
+  padding: 3px;
+}
+
+a.selected { /*get selected class to appear after button click*/
+  text-decoration: none;
+  color: white;
+  background-color: #5F9EA0;
+  border-radius: 5px;
+  border: 2px solid #5F9EA0;
+  margin: 5px;
+  padding: 3px;
+
 }
 
 img{
