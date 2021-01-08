@@ -8,14 +8,8 @@ html
     header
       
       a(href='/') Home
-      if(menu=="Learn")
-        a.selected(href='/learn') Learn
-      else
-        a(href='/learn') Learn
-      if(menu=="Practice")
-        a.selected(href='/practice') Practice
-      else
-        a(href='/practice') Practice
+      a(href='/learn', class=(menu === 'Learn' ? 'selected' : '')) Learn
+      a(href='/practice', class=(menu === 'Practice' ? 'selected' : '')) Practice
     .container
       .main-content
         block content
