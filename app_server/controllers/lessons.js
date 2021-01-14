@@ -52,5 +52,5 @@ module.exports.learn = function(req, res){
 
 /* GET 'Practice' page */
 module.exports.practice = function(req, res){
-	res.render('index', {title: 'Practice Hangul here', menu: 'Practice'});
+	res.render('alphabet-practice', {title: 'Practice Hangul here', menu: 'Practice'});
 };
