@@ -7,18 +7,23 @@ header {
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #FBFFF1; /*ivory background looks pretty nice*/
+  color: #172A3A;
+  /* potential color theme: #5F9EA0(Cadet Blue), #172A3A(Prussian Blue), #004346 (Warm Black), #F46036(Portland Orange), aaand #FBFFF1(Ivory) */
 }
 
 .container {
   /*margin: auto;
-  margin-top: 5px;
-  text-align: center;*/
+  margin-top: 5px;*/
+  text-align: center;
   margin-top: 3px;
+  padding: 10px;
   width: 100%;
   height: 100%;
   position: relative;
   border-radius: 7px;
   border: 3px solid #5F9EA0;
+  background-color: white;
 }
 
 .vertical-center {
