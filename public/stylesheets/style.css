@@ -75,9 +75,15 @@ img{
 	border: 2px solid black;
 }
 
+input{
+  border-radius: 7px;
+  border: 2px solid #172A3A;
+
+}
+
 footer {
   height: 20px;
-  position:absolute;
+  /*position:absolute;*/
   bottom:0;
   right:10px;
 }

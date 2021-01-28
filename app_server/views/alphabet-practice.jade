@@ -3,4 +3,10 @@ extends layout
 block content
 
   p #{title}
-  p There will be content here one day, I swear
+  p Type the sound the character makes into the input box and press enter to test your knowledge.
+  p Note: This page is under construction, not all of its features work yet :)
+  each character in characters
+    div.letters
+      img(id="a0", src=character.src)
+      input(type="text", name="title")
+
