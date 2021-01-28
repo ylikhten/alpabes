@@ -2,19 +2,16 @@ extends layout
 
 block content
 
-	p #{title}
+  p #{title}
+  p Note: This page is under construction, not all of its features work yet :)
 
+  each character in characters
+    div(id="div").letters
+      p #{character.name}
+      img(src=character.src, onclick="removeImg")
 
-	each character in characters
-		div.letters
-			p #{character.name}
-			img(id="a0", src=character.src)
-			
-
-	script.
-		function removeImg(){
-			this.style.display = "none";
-		}
-
-		document.getElementById("a0").addEventListener("click", removeImg);
-		
+  script.
+    function removeImg(){
+      this.style.display = "none";
+    }
+    document.getElementById("div").addEventListener("click", removeImg);		
