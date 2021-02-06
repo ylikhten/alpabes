@@ -2,6 +2,8 @@ var request = require('request');
 var apiOptions = {
   server: 'http://localhost:3000'
 };
+// This needs to be set so apiOptions is correct when deploying on heroku
+// Comment this out when testing production db locally
 if (process.env.NODE_ENV === 'production'){
   apiOptions.server = 'https://fathomless-ridge-97112.herokuapp.com'
 }

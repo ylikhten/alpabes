@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var dbURI = 'mongodb://localhost/alpabes';
 if (process.env.NODE_ENV === 'production'){
+  // when we're more official, put this into mongoURI variable
 	dbURI = 'mongodb+srv://admin:admin@alpabes.36pqk.mongodb.net/alpabes?retryWrites=true&w=majority';
 }
 mongoose.connect(dbURI);
