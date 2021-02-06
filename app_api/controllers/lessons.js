@@ -1,3 +1,6 @@
+var mongoose = require('mongoose');
+var Les = mongoose.model('Lesson');
+
 var sendJsonResponse = function (res, status, content) {
   res.status(status);
   res.json(content);
