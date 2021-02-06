@@ -96,4 +96,11 @@ footer {
   /* display in a row*/
   display:inline-block;
   padding: 5px;
+  border: 2px solid #FBFFF1;
+  background: #FBFFF1;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+
 }

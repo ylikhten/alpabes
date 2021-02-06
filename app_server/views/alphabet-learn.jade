@@ -5,10 +5,13 @@ block content
   p #{title}
   p Note: This page is under construction, not all of its features work yet :)
 
-  each character in characters
+  each chr in characters
     div(id="div").letters
-      p #{character.name}
-      img(src=character.src, onclick="removeImg")
+      p #{chr.name}
+      img(src=chr.src, onclick="removeImg")
+      p Pronunciation: #{chr.pronunciation}
+      p Like #{chr.pronunciation} in #{chr.example}
+
 
   script.
     function removeImg(){
