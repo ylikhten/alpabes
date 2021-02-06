@@ -1,3 +1,5 @@
+var request = require('request');
+
 /* GET home page */
 module.exports.home = function(req, res){
 	res.render('introduction-page', {
@@ -10,10 +12,9 @@ module.exports.home = function(req, res){
 	});
 };
 
-/* GET 'Learn' page */
-module.exports.learn = function(req, res){
-	res.render('alphabet-learn', {
-		title: 'Learn Hangul',
+var renderLearnPage = function(req, res){
+  res.render('alphabet-learn', {
+    title: 'Learn Hangul',
 		menu: 'Learn',
 		characters: [{
 			name: 'Giyeok',
@@ -46,8 +47,12 @@ module.exports.learn = function(req, res){
 			example: 'butter',
 			src: 'images/Korean_Alphabet_bieup.png'
 		}]	
-		
-	});
+  });
+};
+
+/* GET 'Learn' page */
+module.exports.learn = function(req, res){
+  renderLearnPage(req, res);
 };
 
 /* GET 'Practice' page */
