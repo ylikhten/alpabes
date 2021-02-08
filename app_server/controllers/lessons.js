@@ -4,9 +4,9 @@ var apiOptions = {
 };
 // This needs to be set so apiOptions is correct when deploying on heroku
 // Comment this out when testing production db locally
-//if (process.env.NODE_ENV === 'production'){
-//  apiOptions.server = 'https://fathomless-ridge-97112.herokuapp.com'
-//}
+if (process.env.NODE_ENV === 'production'){
+ apiOptions.server = 'https://fathomless-ridge-97112.herokuapp.com'
+}
 
 /* GET home page */
 module.exports.home = function(req, res){
