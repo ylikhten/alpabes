@@ -44,38 +44,31 @@ module.exports.learn = function(req, res){
   );
 };
 
+var renderPracticePage = function(req, res, responseBody){
+	res.render('alphabet-practice', {
+		title: 'Practice Hangul here', 
+		menu: 'Practice', 
+		characters: responseBody	// responseBody from api! wow
+	});
+}
+
 /* GET 'Practice' page */
 module.exports.practice = function(req, res){
-	res.render('alphabet-practice', {title: 'Practice Hangul here', menu: 'Practice', 
-	characters: [{
-			name: 'Giyeok',
-			pronunciation: 'g/k',
-			example: 'duck',
-			src: 'images/Korean_Alphabet_giyeok.png'
-		},{
-			name: 'Nieun',
-			pronunciation: 'n',
-			example: 'neither',
-			src: 'images/Korean_Alphabet_nieun.png'
-		},{
-			name: 'Digeut',
-			pronunciation: 'd',
-			example: 'dot',
-			src: 'images/Korean_Alphabet_digeut.png'
-		},{
-			name: 'Rieul',
-			pronunciation: 'r/l',
-			example: 'real',
-			src: 'images/Korean_Alphabet_rieul.png'
-		},{
-			name: 'Mieum',
-			pronunciation: 'ma',
-			example: 'material',
-			src: 'images/Korean_Alphabet_mieum.png'
-		},{
-			name: 'Bieup',
-			pronunciation: 'b/p',
-			example: 'butter',
-			src: 'images/Korean_Alphabet_bieup.png'
-		}]	});
+	var requestOptions, path;
+	path = '/api/learn';	// set path for API request
+
+	//set reuqestion options
+	requestOptions = {
+		url : apiOptions.server + path,
+		method : "GET",
+		json : {},
+	};
+	// make request, sending through request options
+	request(
+		requestOptions,
+		// supplying callback to render homepage
+		function(err, response, body) {
+			renderPracticePage(req, res, body);	// pass body returned by the request to renderPracticePage function
+		}
+	);
 };
