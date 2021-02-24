@@ -7,7 +7,13 @@ block content
   p Note: This page is under construction, not all of its features work yet :)
   each character in characters
     div.letters
-      img(id="a0", src=character.src)
+      img(id=character._id, src=character.src)
       br
-      input(type="text", name="title")
+      form(action="/practice/#{character._id}", method="post", role="form")
+        input(type="text", name="answer")
 
+  script.
+    function handle (event) {
+      //event.preventDefault();
+      alert("enter pressed");
+    }

@@ -16,3 +16,24 @@ module.exports.getAllAlphabet = function(req, res) {
     }
   });
 };
+
+
+module.exports.checkAnswer = function (req, res) {
+  var charid = req.params.characterid;
+  var answer = req.body.answer;
+
+  Les.find({"_id" : charid}, function (err, correctAnswer){
+    console.log(answer);
+    if (err) {
+      sendJsonResponse(res, 404, err);
+    } else {
+      if (correctAnswer[0].pronunciation === answer) {
+        console.log("correct");
+        sendJsonResponse(res, 201, answer);
+      } else {
+        console.log("incorrect");
+        sendJsonResponse(res, 201, -1);
+      }
+    }
+  });
+};

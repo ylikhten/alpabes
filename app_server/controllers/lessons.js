@@ -72,3 +72,28 @@ module.exports.practice = function(req, res){
 		}
 	);
 };
+
+module.exports.checkAnswer = function (req, res) {
+  var requestOptions, path, characterid, postdata;
+  characterid = req.params.characterid;
+  path = "/api/practice/" + characterid;
+  postdata = {
+    id: characterid,
+    answer: req.body.answer
+  };
+  requestOptions = {
+    url: apiOptions.server + path,
+    method: "POST",
+    json: postdata
+  };
+  request(requestOptions, 
+    function (err, response, body) {
+      if (response.body === -1) {
+        res.redirect('/practice')
+        console.log(body);
+      } else {
+        res.redirect('/practice');
+      }
+      
+  });
+}
