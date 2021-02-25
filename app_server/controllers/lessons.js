@@ -44,13 +44,17 @@ module.exports.learn = function(req, res){
   );
 };
 
-var renderPracticePage = function(req, res, responseBody){
+var renderPracticePage = function(req, res, globalVar){
 	res.render('alphabet-practice', {
 		title: 'Practice Hangul here', 
 		menu: 'Practice', 
-		characters: responseBody	// responseBody from api! wow
+		characters: globalVar.allChars,	// responseBody from api! wow
+    check: globalVar.check,
+    charid: globalVar.charid
 	});
 }
+
+var globalVar = {};
 
 /* GET 'Practice' page */
 module.exports.practice = function(req, res){
@@ -68,18 +72,20 @@ module.exports.practice = function(req, res){
 		requestOptions,
 		// supplying callback to render homepage
 		function(err, response, body) {
-			renderPracticePage(req, res, body);	// pass body returned by the request to renderPracticePage function
+      globalVar.allChars = body;
+			renderPracticePage(req, res, globalVar);	// pass body returned by the request to renderPracticePage function
 		}
 	);
 };
 
 module.exports.checkAnswer = function (req, res) {
   var requestOptions, path, characterid, postdata;
-  characterid = req.params.characterid;
-  path = "/api/practice/" + characterid;
+  globalVar.charid = req.query.charid;
+  globalVar.answer = req.body.answer;
+  path = "/api/practice/" + globalVar.charid;
   postdata = {
-    id: characterid,
-    answer: req.body.answer
+    id: globalVar.charid,
+    answer: globalVar.answer
   };
   requestOptions = {
     url: apiOptions.server + path,
@@ -88,12 +94,20 @@ module.exports.checkAnswer = function (req, res) {
   };
   request(requestOptions, 
     function (err, response, body) {
-      if (response.body === -1) {
-        res.redirect('/practice')
-        console.log(body);
+      if (body.correctAnswer) {
+        //res.redirect("/practice?check=" + body.answer);
+        globalVar.check = body.answer;
+        renderPracticePage(req, res, globalVar);
+        // globalVar.allChars only contains data if there was a GET
+        // on the practice page first
+        console.log(globalVar.allChars);
+        console.log(encodeURIComponent('test'));
       } else {
-        res.redirect('/practice');
+        //res.redirect("/practice?check=" + encodeURIComponent('-1'));
+        globalVar.check = "-1";
+        renderPracticePage(req, res, globalVar);
       }
       
   });
 }
+

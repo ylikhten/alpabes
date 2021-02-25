@@ -19,20 +19,35 @@ module.exports.getAllAlphabet = function(req, res) {
 
 
 module.exports.checkAnswer = function (req, res) {
-  var charid = req.params.characterid;
-  var answer = req.body.answer;
-
-  Les.find({"_id" : charid}, function (err, correctAnswer){
-    console.log(answer);
+  //var charid = req.params.characterid;
+  //var answer = req.body.answer;
+  //var correctAnswer = false;
+  Les.find({}, function (err, allChars){
+    var allData = {
+      charid : req.params.characterid,
+      answer : req.body.answer,
+      allChars : allChars,
+      correctAnswer : false
+    };
+    //console.log(allData.allChars);
+    //console.log(typeof(allData.charid));
+    for (var i = 0; i < allData.allChars.length; i++) {
+      if (allData.allChars[i]["_id"] == allData.charid) {
+        if (allData.allChars[i]["pronunciation"] == allData.answer) {
+          allData.correctAnswer = true;
+        }
+      }
+    }
+    console.log(allData.answer);
     if (err) {
       sendJsonResponse(res, 404, err);
     } else {
-      if (correctAnswer[0].pronunciation === answer) {
+      if (allData.correctAnswer) {
         console.log("correct");
-        sendJsonResponse(res, 201, answer);
+        sendJsonResponse(res, 201, allData);
       } else {
         console.log("incorrect");
-        sendJsonResponse(res, 201, -1);
+        sendJsonResponse(res, 201, allData);
       }
     }
   });

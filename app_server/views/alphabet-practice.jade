@@ -6,14 +6,19 @@ block content
   p Type the sound the character makes into the input box and press enter to test your knowledge.
   p Note: This page is under construction, not all of its features work yet :)
   each character in characters
-    div.letters
+    div(class=(check === '-1' && charid === character._id ? 'incorrect' : 'letters'))
       img(id=character._id, src=character.src)
       br
-      form(action="/practice/#{character._id}", method="post", role="form")
+      form(action="/practice?charid=#{character._id}", method="post", role="form")
         input(type="text", name="answer")
 
   script.
-    function handle (event) {
-      //event.preventDefault();
-      alert("enter pressed");
-    }
+    function getClass(charid, characterid, check){
+      if (check === '-1' && charid == characterid) {
+        return "incorrect";
+      } else if (check !== "-1" && typeof(check) !== "undefined" && charid == characterid) {
+        return "correct";
+      }
+      return "letters";
+      };
+ 

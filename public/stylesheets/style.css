@@ -104,3 +104,29 @@ footer {
   margin: 10px;
 
 }
+
+.incorrect {
+  background: #F46036;
+  /* display in a row*/
+  display:inline-block;
+  padding: 5px;
+  border: 2px solid #FBFFF1;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+
+}
+
+.correct {
+  background: #5F9EA0;
+  /* display in a row*/
+  display:inline-block;
+  padding: 5px;
+  border: 2px solid #FBFFF1;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+
+}
