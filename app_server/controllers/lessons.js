@@ -44,17 +44,19 @@ module.exports.learn = function(req, res){
   );
 };
 
+
+var globalVar = {};
+
 var renderPracticePage = function(req, res, globalVar){
 	res.render('alphabet-practice', {
 		title: 'Practice Hangul here', 
 		menu: 'Practice', 
 		characters: globalVar.allChars,	// responseBody from api! wow
     check: globalVar.check,
-    charid: globalVar.charid
+    charid: globalVar.charid,
+    answer: globalVar.answer
 	});
 }
-
-var globalVar = {};
 
 /* GET 'Practice' page */
 module.exports.practice = function(req, res){
@@ -73,6 +75,9 @@ module.exports.practice = function(req, res){
 		// supplying callback to render homepage
 		function(err, response, body) {
       globalVar.allChars = body;
+      globalVar.check = '';
+      globalVar.charid = '';
+      globalVar.answer = '';
 			renderPracticePage(req, res, globalVar);	// pass body returned by the request to renderPracticePage function
 		}
 	);
@@ -94,16 +99,13 @@ module.exports.checkAnswer = function (req, res) {
   };
   request(requestOptions, 
     function (err, response, body) {
+      // globalVar.allChars only contains data if there was a GET
+      // on the practice page first
+      globalVar.allChars = body.allChars;
       if (body.correctAnswer) {
-        //res.redirect("/practice?check=" + body.answer);
         globalVar.check = body.answer;
         renderPracticePage(req, res, globalVar);
-        // globalVar.allChars only contains data if there was a GET
-        // on the practice page first
-        console.log(globalVar.allChars);
-        console.log(encodeURIComponent('test'));
       } else {
-        //res.redirect("/practice?check=" + encodeURIComponent('-1'));
         globalVar.check = "-1";
         renderPracticePage(req, res, globalVar);
       }
