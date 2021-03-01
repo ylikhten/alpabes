@@ -6,6 +6,22 @@ var sendJsonResponse = function (res, status, content) {
   res.json(content);
 };
 
+/* Ajax testing functions */
+module.exports.test = function(req, res) {
+  Les.find({}, function(err, allChars) {
+    var display = {};
+    if (req.body.input == allChars[0]['pronunciation']){
+      display.display = req.body.input;
+    }
+    if (err) {
+      sendJsonResponse(res, 404, err);
+    } else {
+      console.log(display.display);
+      sendJsonResponse(res, 200, display);
+    }
+  });
+};
+
 var allData = {};
 
 module.exports.getAllAlphabet = function(req, res) {

@@ -8,4 +8,7 @@ router.get('/learn', ctrlLessons.getAllAlphabet);
 //router.post('/practice', ctrlLessons.checkAnswer);
 router.post('/practice/:characterid', ctrlLessons.checkAnswer);
 
+/* Ajax testing routes */
+router.post('/test', ctrlLessons.test);
+
 module.exports = router;
