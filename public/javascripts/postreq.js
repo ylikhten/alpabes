@@ -1,18 +1,18 @@
-$(function(){
-  $('#test-form').submit(function(event){
+$(function () {
+  $('#test-form').submit(function(event) {
 
-    window.alert("here!");
     event.preventDefault();
     event.stopPropagation();
-    var disable = {
-      disable: $('#test').val();
+    var dataToPost = {
+      'input': $('#test').val()
     };
 
+    window.alert(dataToPost.input);
     $.ajax({
-      url: '/api/learn',
+      url: '/api/test',
       type: 'POST',
-      contentType: 'applications/json',
-      data: JSON.stringify(disable),
+      contentType: 'application/json',
+      data: JSON.stringify(dataToPost),
       success: function(result){
         window.alert("success " + result);
       }
@@ -21,3 +21,27 @@ $(function(){
   });
 
 });
+/*
++// SUBMIT FORM
++$(function () {
++  $('#test-form').submit(function(event) {
++    //prevent form from submitting vie browser
++    // i.e. stop page from reloading on submit
++    event.preventDefault();
++    event.stopPropagation();
++    window.alert("pressed enter");
++    var dataToPost = {
++      'input': $('#test').val()
++    };
++    $.ajax({
++      url: '/api/test',
++      type: 'POST',
++      contentType: 'application/json',
++      data: JSON.stringify(dataToPost),
++      success: function(result){
++        window.alert("success " + result);
++      }
++    })
++  });
++});
+*/
