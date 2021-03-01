@@ -10,15 +10,6 @@ block content
       img(id=character._id, src=character.src)
       br
       form(action="/practice?charid=#{character._id}", method="post", role="form")
-        input(type="text", name="answer", value=(character.css === 'correct' ? character.pronunciation : ""))
+        input(type="text", id="answer", name="answer", value=(character.css === 'correct' ? character.pronunciation : ""))
 
-  script.
-    function getClass(charid, characterid, check){
-      if (check === '-1' && charid == characterid) {
-        return "incorrect";
-      } else if (check !== "-1" && typeof(check) !== "undefined" && charid == characterid) {
-        return "correct";
-      }
-      return "letters";
-      };
- 
+    //script(src='/javascripts/postreq.js')

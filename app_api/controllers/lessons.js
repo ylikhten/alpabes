@@ -41,7 +41,6 @@ module.exports.checkAnswer = function (req, res) {
         if (allData.allChars[i]["pronunciation"] == allData.answer) {
           allData.correctAnswer = true;
           allData.allChars[i]['css'] = 'correct';
-          //console.log(allData.allChars);
         } else {
           allData.allChars[i]['css'] = 'incorrect';
         }

@@ -4,8 +4,22 @@ var apiOptions = {
 };
 // This needs to be set so apiOptions is correct when deploying on heroku
 // Comment this out when testing production db locally
-if (process.env.NODE_ENV === 'production'){
- apiOptions.server = 'https://fathomless-ridge-97112.herokuapp.com'
+//if (process.env.NODE_ENV === 'production'){
+// apiOptions.server = 'https://fathomless-ridge-97112.herokuapp.com'
+//}
+
+/*TESTING AJAX REQUESTS */
+module.exports.test = function(req, res) {
+  res.render('test', {
+    title: 'Ajax Test page',
+  });
+}
+
+module.exports.testpost = function(req, res) {
+  console.log("post happened");
+  console.log(req.body.input);
+  //res.render('test');
+  res.sendStatus(200);
 }
 
 /* GET home page */
@@ -84,9 +98,10 @@ module.exports.practice = function(req, res){
 };
 
 module.exports.checkAnswer = function (req, res) {
-  var requestOptions, path, characterid, postdata;
+  var requestOptions, path, postdata;
   globalVar.charid = req.query.charid;
   globalVar.answer = req.body.answer;
+
   path = "/api/practice/" + globalVar.charid;
   postdata = {
     id: globalVar.charid,
@@ -97,6 +112,7 @@ module.exports.checkAnswer = function (req, res) {
     method: "POST",
     json: postdata
   };
+
   request(requestOptions, 
     function (err, response, body) {
       // globalVar.allChars only contains data if there was a GET
@@ -108,8 +124,7 @@ module.exports.checkAnswer = function (req, res) {
       } else {
         globalVar.check = "-1";
         renderPracticePage(req, res, globalVar);
-      }
-      
+      } 
   });
 }
 

@@ -6,9 +6,13 @@ var ctrlLessons = require('../controllers/lessons');
 router.get('/', ctrlLessons.home);
 router.get('/learn', ctrlLessons.learn);
 router.get('/practice', ctrlLessons.practice);
-
 router.post('/practice', ctrlLessons.checkAnswer);
-//router.post('/practice/:characterid', ctrlLessons.checkAnswer);
-//router.get('/practice/:answer', ctrlLessons.routeAnswer);
+
+
+/* Testing ajax request */
+router.get('/test', ctrlLessons.test)
+router.post('/test', ctrlLessons.testpost)
+
+
 
 module.exports = router;
