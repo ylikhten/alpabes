@@ -96,7 +96,45 @@
 	"example" : "hi",
 	"src" : "images/14_hieung.png",
 	"type" : "consonant"
-}
+},
 
+
+
+
+{
+	"name" : "Ssang_giyeok",
+	"pronunciation" : "kk/gg",
+	"example" : "google",
+	"src" : "images/15_ssang_giyeok.png",
+	"type" : "dbconsonant"
+},
+{
+	"name" : "Ssang_digeut",
+	"pronunciation" : "dd",
+	"example" : "doodle",
+	"src" : "images/16_ssang_digeut.png",
+	"type" : "dbconsonant"
+},
+{
+	"name" : "Ssang_bieup",
+	"pronunciation" : "bb",
+	"example" : "booty",
+	"src" : "images/17_ssang_bieup.png",
+	"type" : "dbconsonant"
+},
+{
+	"name" : "Ssang_sieut",
+	"pronunciation" : "ss",
+	"example" : "soothe",
+	"src" : "images/18_ssang_sieut.png",
+	"type" : "dbconsonant"
+},
+{
+	"name" : "Ssang_jieut",
+	"pronunciation" : "jj",
+	"example" : "jjelly",
+	"src" : "images/19_ssang_jieut.png",
+	"type" : "dbconsonant"
+}
 
 ]

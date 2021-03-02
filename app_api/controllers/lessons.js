@@ -19,6 +19,7 @@ module.exports.getAllAlphabet = function(req, res) {
       temp['pronunciation'] = allChars[i].pronunciation;
       temp['name'] = allChars[i].name;
       temp['example'] = allChars[i].example;
+      temp['type'] = allChars[i].type;
       chars.push(temp);
     }
     if (err) {
