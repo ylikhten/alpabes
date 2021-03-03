@@ -6,6 +6,22 @@ var sendJsonResponse = function (res, status, content) {
   res.json(content);
 };
 
+/* Ajax testing functions */
+module.exports.test = function(req, res) {
+  Les.find({}, function(err, allChars) {
+    var display = {};
+    if (req.body.input == allChars[0]['pronunciation']){
+      display.display = req.body.input;
+    }
+    if (err) {
+      sendJsonResponse(res, 404, err);
+    } else {
+      console.log(display.display);
+      sendJsonResponse(res, 200, display);
+    }
+  });
+};
+
 var allData = {};
 
 module.exports.getAllAlphabet = function(req, res) {
@@ -33,22 +49,22 @@ module.exports.getAllAlphabet = function(req, res) {
 
 
 module.exports.checkAnswer = function (req, res) {
+  console.log(req.body.input);
+  console.log(req.body.charid);
   Les.find({}, function (err, allChars){
-    allData.charid = req.params.characterid;
-    allData.answer = req.body.answer;
+    allData.charid = req.body.charid;
+    allData.answer = req.body.input;
     allData.correctAnswer = false;
     for (var i = 0; i < allData.allChars.length; i++) {
       if (allData.allChars[i]["_id"] == allData.charid) {
         if (allData.allChars[i]["pronunciation"] == allData.answer) {
           allData.correctAnswer = true;
           allData.allChars[i]['css'] = 'correct';
-          //console.log(allData.allChars);
         } else {
           allData.allChars[i]['css'] = 'incorrect';
         }
       }
     }
-    console.log(allData.answer);
     if (err) {
       sendJsonResponse(res, 404, err);
     } else {
