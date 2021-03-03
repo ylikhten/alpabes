@@ -1,6 +1,7 @@
 $(function () {
   $('.answer-form-class').submit(function(event) {
     var formid = this.id;
+    //window.alert(formid);
     event.preventDefault();
     event.stopPropagation();
     var dataToPost = {
@@ -8,16 +9,18 @@ $(function () {
       'charid': formid
     };
 
-    window.alert(dataToPost.input);
+    //window.alert(dataToPost.input);
     $.ajax({
       url: '/api/practice/' + $(formid),
       type: 'POST',
       contentType: 'application/json',
       data: JSON.stringify(dataToPost),
     }).done(function(data){
-      window.alert(data);
-      var div = document.getElementById("test-display");
-      div.innerHTML += data.display;
+      if (data.correctAnswer) {
+        $('#div-' + data.charid).removeClass('letters').addClass('correct'); 
+      } else {
+        $('#div-' + data.charid).removeClass('letters').addClass('incorrect'); 
+      }
     });
     
   });

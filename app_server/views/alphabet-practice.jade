@@ -5,9 +5,10 @@ block content
   p #{title}
   p Type the sound the character makes into the input box and press enter to test your knowledge.
   p Note: This page is under construction, not all of its features work yet :)
-  each character in characters
-    div(class=character.css)
-      img(id=character._id, src=character.src)
-      br
-      form(id=character._id, class="answer-form-class", data-charid=character._id, role="form")
-        input(type="text", id="answer-" + character._id, name="answer", value=(character.css === 'correct' ? character.pronunciation : ""))
+  div(id="char-display-div")
+    each character in characters
+      div(class=character.css, id="div-" + character._id)
+        img(id=character._id, src=character.src)
+        br
+        form(id=character._id, class="answer-form-class", data-charid=character._id, role="form")
+          input(type="text", id="answer-" + character._id, name="answer", value=(character.css === 'correct' ? character.pronunciation : ""))

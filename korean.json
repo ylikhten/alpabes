@@ -3,43 +3,138 @@
 	"name" : "Giyeok",
 	"pronunciation" : "g/k",
 	"example" : "duck",
-	"src" : "images/Korean_Alphabet_giyeok.png"
+	"src" : "images/01_giyeok.png",
+	"type" : "consonant"
 },
 {
 	"name" : "Nieun",
 	"pronunciation" : "n",
 	"example" : "neither",
-	"src" : "images/Korean_Alphabet_nieun.png"
+	"src" : "images/02_nieun.png",
+	"type" : "consonant"
 },
 {
 	"name" : "Digeut",
 	"pronunciation" : "d",
 	"example" : "dot",
-	"src" : "images/Korean_Alphabet_digeut.png"
+	"src" : "images/03_digeut.png",
+	"type" : "consonant"
 },
 {
 	"name" : "Mieum",
 	"pronunciation" : "ma",
 	"example" : "material",
-	"src" : "images/Korean_Alphabet_mieum.png"
+	"src" : "images/04_mieum.png",
+	"type" : "consonant"
 },
 {
 	"name" : "Rieul",
 	"pronunciation" : "r/l",
 	"example" : "real",
-	"src" : "images/Korean_Alphabet_rieul.png"
+	"src" : "images/05_rieul.png",
+	"type" : "consonant"
 },
 {
 	"name" : "Bieup",
 	"pronunciation" : "b/p",
 	"example" : "butter",
-	"src" : "images/Korean_Alphabet_bieup.png"
+	"src" : "images/06_bieup.png",
+	"type" : "consonant"
 },
 {
-  "name": "Chieut",
-  "pronunciation": "ch",
-  "example": "cherry",
-  "src": "images/Korean_Alphabet_chieut.png"
+	"name" : "Sieut",
+	"pronunciation" : "s",
+	"example" : "soft",
+	"src" : "images/07_sieut.png",
+	"type" : "consonant"
+},
+{
+	"name" : "ieung",
+	"pronunciation" : "depends on vowel",
+	"example" : "open, apple, etc",
+	"src" : "images/08_ieung.png",
+	"type" : "consonant"
+},
+{
+	"name": "Jieut",
+	"pronunciation": "j",
+	"example": "jolly",
+	"src": "images/09_jieut.png",
+	"type" : "consonant"
+},
+{
+	"name": "Chieut",
+	"pronunciation": "ch",
+	"example": "cherry",
+	"src": "images/10_chieut.png",
+	"type" : "consonant"
+},
+{
+	"name" : "Kieuk",
+	"pronunciation" : "k",
+	"example" : "kawaii",
+	"src" : "images/11_kieuk.png",
+	"type" : "consonant"
+},
+{
+	"name" : "Pieup",
+	"pronunciation" : "p",
+	"example" : "poppy",
+	"src" : "images/12_pieup.png",
+	"type" : "consonant"
+},
+{
+	"name" : "tieut",
+	"pronunciation" : "t",
+	"example" : "toffee",
+	"src" : "images/13_tieut.png",
+	"type" : "consonant"
+},
+{
+	"name" : "hieung",
+	"pronunciation" : "h",
+	"example" : "hi",
+	"src" : "images/14_hieung.png",
+	"type" : "consonant"
+},
+
+
+
+
+{
+	"name" : "Ssang_giyeok",
+	"pronunciation" : "kk/gg",
+	"example" : "google",
+	"src" : "images/15_ssang_giyeok.png",
+	"type" : "dbconsonant"
+},
+{
+	"name" : "Ssang_digeut",
+	"pronunciation" : "dd",
+	"example" : "doodle",
+	"src" : "images/16_ssang_digeut.png",
+	"type" : "dbconsonant"
+},
+{
+	"name" : "Ssang_bieup",
+	"pronunciation" : "bb",
+	"example" : "booty",
+	"src" : "images/17_ssang_bieup.png",
+	"type" : "dbconsonant"
+},
+{
+	"name" : "Ssang_sieut",
+	"pronunciation" : "ss",
+	"example" : "soothe",
+	"src" : "images/18_ssang_sieut.png",
+	"type" : "dbconsonant"
+},
+{
+	"name" : "Ssang_jieut",
+	"pronunciation" : "jj",
+	"example" : "jjelly",
+	"src" : "images/19_ssang_jieut.png",
+	"type" : "dbconsonant"
 }
 
 ]
