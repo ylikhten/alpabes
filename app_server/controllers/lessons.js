@@ -112,7 +112,7 @@ module.exports.checkAnswer = function (req, res) {
     method: "POST",
     json: postdata
   };
-
+  /*
   request(requestOptions, 
     function (err, response, body) {
       // globalVar.allChars only contains data if there was a GET
@@ -125,6 +125,6 @@ module.exports.checkAnswer = function (req, res) {
         globalVar.check = "-1";
         renderPracticePage(req, res, globalVar);
       } 
-  });
+  });*/
 }
 

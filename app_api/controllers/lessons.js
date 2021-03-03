@@ -48,9 +48,11 @@ module.exports.getAllAlphabet = function(req, res) {
 
 
 module.exports.checkAnswer = function (req, res) {
+  console.log(req.body.input);
+  console.log(req.body.charid);
   Les.find({}, function (err, allChars){
-    allData.charid = req.params.characterid;
-    allData.answer = req.body.answer;
+    allData.charid = req.body.charid;
+    allData.answer = req.body.input;
     allData.correctAnswer = false;
     for (var i = 0; i < allData.allChars.length; i++) {
       if (allData.allChars[i]["_id"] == allData.charid) {
@@ -62,7 +64,6 @@ module.exports.checkAnswer = function (req, res) {
         }
       }
     }
-    console.log(allData.answer);
     if (err) {
       sendJsonResponse(res, 404, err);
     } else {

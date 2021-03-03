@@ -1,21 +1,23 @@
 $(function () {
-  $('#test-form').submit(function(event) {
-
+  $('.answer-form-class').submit(function(event) {
+    var formid = this.id;
     event.preventDefault();
     event.stopPropagation();
     var dataToPost = {
-      'input': $('#test').val()
+      'input': $('#answer-' + formid).val(),
+      'charid': formid
     };
 
     window.alert(dataToPost.input);
     $.ajax({
-      url: '/api/test',
+      url: '/api/practice/' + $(formid),
       type: 'POST',
       contentType: 'application/json',
       data: JSON.stringify(dataToPost),
-      success: function(result){
-        window.alert("success " + result);
-      }
+    }).done(function(data){
+      window.alert(data);
+      var div = document.getElementById("test-display");
+      div.innerHTML += data.display;
     });
     
   });
