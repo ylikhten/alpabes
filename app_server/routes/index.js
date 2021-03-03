@@ -14,8 +14,8 @@ router.route('/practice')
 */
 
 /* Testing ajax request */
-router.get('/test', ctrlLessons.test)
-router.post('/test', ctrlLessons.testpost)
+//router.get('/test', ctrlLessons.test)
+//router.post('/test', ctrlLessons.testpost)
 
 
 

@@ -49,8 +49,6 @@ module.exports.getAllAlphabet = function(req, res) {
 
 
 module.exports.checkAnswer = function (req, res) {
-  console.log(req.body.input);
-  console.log(req.body.charid);
   Les.find({}, function (err, allChars){
     allData.charid = req.body.charid;
     allData.answer = req.body.input;
