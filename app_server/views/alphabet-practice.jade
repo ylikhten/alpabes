@@ -8,7 +8,7 @@ block content
   div(id="char-display-div")
     each character in characters
       div(class=character.css, id="div-" + character._id)
-        img(id=character._id, src=character.src)
+        img(id=character._id, src=character.src, width="90", height="90")
         br
         form(id=character._id, class="answer-form-class", data-charid=character._id, role="form")
           input(type="text", id="answer-" + character._id, name="answer", value=(character.css === 'correct' ? character.pronunciation : ""))

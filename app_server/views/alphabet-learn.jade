@@ -8,7 +8,7 @@ block content
   each chr in characters
     div(id="div").letters
       p #{chr.name}
-      img(src=chr.src, onclick="removeImg")
+      img(src=chr.src, onclick="removeImg", width="90", height="90")
       p Pronunciation: #{chr.pronunciation}
       p Like #{chr.pronunciation} in #{chr.example}
 
