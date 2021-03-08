@@ -131,3 +131,14 @@ footer {
   margin: 10px;
   pointer-events: none;
 }
+
+.correct-input {
+  background: #5F9EA0;
+  color: #FBFFF1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.incorrect-input {
+  color: grey;
+}
