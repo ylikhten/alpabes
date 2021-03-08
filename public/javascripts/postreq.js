@@ -21,8 +21,10 @@ $(function () {
       // set css class depending on answer from API
       if (data.correctAnswer) {
         $('#div-' + data.charid).removeClass('letters').addClass('correct'); 
+        $('#answer-' + data.charid).addClass('correct-input').removeClass('incorrect-input');
       } else {
         $('#div-' + data.charid).removeClass('letters').addClass('incorrect'); 
+        $('#answer-' + data.charid).addClass('incorrect-input');
       }
     });
   });
