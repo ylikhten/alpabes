@@ -38,7 +38,14 @@ var renderLearnPage = function(req, res, body){
     title: 'Learn Hangul',
 		menu: 'Learn',
 		characters: body
+    
   });
+
+  // how to access the body....?
+  // for (x in body){
+
+  //   console.log(x)
+  // }
 };
 
 /* GET 'Learn' page */

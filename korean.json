@@ -21,17 +21,17 @@
 	"type" : "consonant"
 },
 {
-	"name" : "Mieum",
-	"pronunciation" : "ma",
-	"example" : "material",
-	"src" : "images/04_mieum.png",
-	"type" : "consonant"
-},
-{
 	"name" : "Rieul",
 	"pronunciation" : "r/l",
 	"example" : "real",
-	"src" : "images/05_rieul.png",
+	"src" : "images/04_rieul.png",
+	"type" : "consonant"
+},
+{
+	"name" : "Mieum",
+	"pronunciation" : "ma",
+	"example" : "material",
+	"src" : "images/05_mieum.png",
 	"type" : "consonant"
 },
 {
@@ -49,9 +49,9 @@
 	"type" : "consonant"
 },
 {
-	"name" : "ieung",
-	"pronunciation" : "depends on vowel",
-	"example" : "open, apple, etc",
+	"name" : "Ieung",
+	"pronunciation" : "o/a/e",
+	"example" : "open, apple, evil",
 	"src" : "images/08_ieung.png",
 	"type" : "consonant"
 },
@@ -84,14 +84,14 @@
 	"type" : "consonant"
 },
 {
-	"name" : "tieut",
+	"name" : "Tieut",
 	"pronunciation" : "t",
 	"example" : "toffee",
 	"src" : "images/13_tieut.png",
 	"type" : "consonant"
 },
 {
-	"name" : "hieung",
+	"name" : "Hieung",
 	"pronunciation" : "h",
 	"example" : "hi",
 	"src" : "images/14_hieung.png",
@@ -135,6 +135,105 @@
 	"example" : "jjelly",
 	"src" : "images/19_ssang_jieut.png",
 	"type" : "dbconsonant"
+},
+
+
+{
+	"name" : "A",
+	"pronunciation" : "ah",
+	"example" : "ahjussi",
+	"src" : "images/20_a.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Ya",
+	"pronunciation" : "ya",
+	"example" : "yonder",
+	"src" : "images/21_ya.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Uh",
+	"pronunciation" : "uh",
+	"example" : "under",
+	"src" : "images/22_uh.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Yuh",
+	"pronunciation" : "yuh",
+	"example" : "yup",
+	"src" : "images/23_yuh.png",
+	"type" : "vowel"
+},
+{
+	"name" : "O",
+	"pronunciation" : "O",
+	"example" : "over",
+	"src" : "images/24_o.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Yo",
+	"pronunciation": "yoing",
+	"src" : "images/25_yo.png",
+	"type" : "vowel"
+},
+{
+	"name" : "U",
+	"pronunciation" : "uoo",
+	"example" : "uber",
+	"src" : "images/26_u.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Yu",
+	"pronunciation" : "Yu",
+	"example" : "you",
+	"src" : "images/27_yu.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Eu",
+	"pronunciation" : "eu",
+	"example" : "eu",
+	"src" : "images/28_eu.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Ee",
+	"pronunciation" : "ee",
+	"example" : "weeee~",
+	"src" : "images/29_ee.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Ae",
+	"pronunciation" : "ae",
+	"example" : "effect",
+	"src" : "images/30_ae.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Yae",
+	"pronunciation" : "yae",
+	"example" : "yes",
+	"src" : "images/31_yae.png",
+	"type" : "vowel"
+},
+{
+	"name" : "e",
+	"pronunciation" : "eh",
+	"example" : "eh",
+	"src" : "images/32_e.png",
+	"type" : "vowel"
+},
+{
+	"name" : "Ye",
+	"pronunciation" : "yeh",
+	"example" : "yeh",
+	"src" : "images/33_ye.png",
+	"type" : "vowel"
 }
 
 ]
