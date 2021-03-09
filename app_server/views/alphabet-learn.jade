@@ -2,16 +2,42 @@ extends layout
 
 block content
 
-  p #{title}
+  p <h1>#{title}</h1>
   p Note: This page is under construction, not all of its features work yet :)
 
-  each chr in characters
-    div(id="div").letters
-      p #{chr.name}
-      img(src=chr.src, onclick="removeImg", width="90", height="90")
-      p Pronunciation: #{chr.pronunciation}
-      p Like #{chr.pronunciation} in #{chr.example}
+  //- each chr in characters
+  //-   div(id="div").letters
+  //-     p #{chr.name}
+  //-     img(src=chr.src, onclick="removeImg", width="90", height="90")
+  //-     p Pronunciation: #{chr.pronunciation}
+  //-     p Like #{chr.pronunciation} in #{chr.example}
 
+  p <br><br>
+  p <h1>Consonants </h1>
+  each con in consonants 
+    div(id="div").letters
+      p #{con.name}
+      img(src=con.src, onclick="removeImg", width="90", height="90")
+      p Pronunciation: #{con.pronunciation}
+      p Like #{con.pronunciation} in #{con.example}
+
+  p <br><br>
+  p <h1>Double consonants</h1>
+  each dbcon in dbconsonants 
+    div(id="div").letters
+      p #{dbcon.name}
+      img(src=dbcon.src, onclick="removeImg", width="90", height="90")
+      p Pronunciation: #{dbcon.pronunciation}
+      p Like #{dbcon.pronunciation} in #{dbcon.example}
+
+  p <br><br>
+  p <h1>Vowels</h1>
+  each v in vowels 
+    div(id="div").letters
+      p #{v.name}
+      img(src=v.src, onclick="removeImg", width="90", height="90")
+      p Pronunciation: #{v.pronunciation}
+      p Like #{v.pronunciation} in #{v.example}
 
   script.
     function removeImg(){

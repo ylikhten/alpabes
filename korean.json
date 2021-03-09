@@ -138,6 +138,11 @@
 },
 
 
+
+
+
+
+
 {
 	"name" : "A",
 	"pronunciation" : "ah",
@@ -168,14 +173,15 @@
 },
 {
 	"name" : "O",
-	"pronunciation" : "O",
+	"pronunciation" : "o",
 	"example" : "over",
 	"src" : "images/24_o.png",
 	"type" : "vowel"
 },
 {
 	"name" : "Yo",
-	"pronunciation": "yoing",
+	"pronunciation": "yo",
+	"example" :"yoink",
 	"src" : "images/25_yo.png",
 	"type" : "vowel"
 },
@@ -188,7 +194,7 @@
 },
 {
 	"name" : "Yu",
-	"pronunciation" : "Yu",
+	"pronunciation" : "yu",
 	"example" : "you",
 	"src" : "images/27_yu.png",
 	"type" : "vowel"

@@ -70,6 +70,11 @@ a.selected { /*get selected class to appear after button click*/
 
 }
 
+h1
+{
+  color: #5F9EA0;
+}
+
 img{
 	border-radius: 7px;
 	border: 2px solid black;

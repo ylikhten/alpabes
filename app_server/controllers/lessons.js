@@ -33,19 +33,54 @@ module.exports.home = function(req, res){
 	});
 };
 
+
+
 var renderLearnPage = function(req, res, body){
+  // first separate each character - consonant, dbconsonant, vowel
+  consonants = [];
+  dbconsonants = [];
+  vowels = [];
+
+  // for each character in the body
+  for (character in body){
+    type = body[character].type
+
+    if(type == "consonant"){
+      consonants.push(body[character]);
+    }
+    else if(type == "dbconsonant"){
+      dbconsonants.push(body[character]);
+    }
+    else{
+      vowels.push(body[character]);
+    }
+  };
+  
+  // put letters in order
+  function compare(a, b){
+    if(a.src < b.src){
+      return -1;
+    }
+    if(a.src > b.src){
+      return 1;
+    }
+    return 0;
+  }
+  consonants.sort(compare);
+  dbconsonants.sort(compare);
+  vowels.sort(compare);
+
+  // send the letters to view
   res.render('alphabet-learn', {
-    title: 'Learn Hangul',
+    title: 'Learn Hangul',    // these are the variables used in alphabet-learn.jade to display!
 		menu: 'Learn',
-		characters: body
+		// characters: body,
+    consonants: consonants,
+    dbconsonants: dbconsonants,
+    vowels: vowels
     
   });
 
-  // how to access the body....?
-  // for (x in body){
-
-  //   console.log(x)
-  // }
 };
 
 /* GET 'Learn' page */
