@@ -2,6 +2,7 @@ extends layout
 
 block content
 
+  
   p <h1>#{title}</h1>
   p Note: This page is under construction, not all of its features work yet :)
 
@@ -13,29 +14,32 @@ block content
   //-     p Like #{chr.pronunciation} in #{chr.example}
 
   p <br><br>
+  img(id="icon", src="images/jayz.png", display=block)
   p <h1>Consonants </h1>
   each con in consonants 
     div(id="div").letters
       p #{con.name}
-      img(src=con.src, onclick="removeImg", width="90", height="90")
+      img(id="letter", src=con.src, onclick="removeImg", width="90", height="90")
       p Pronunciation: #{con.pronunciation}
       p Like #{con.pronunciation} in #{con.example}
 
   p <br><br>
+  img(src="images/frodo.png", display=block)
   p <h1>Double consonants</h1>
   each dbcon in dbconsonants 
     div(id="div").letters
       p #{dbcon.name}
-      img(src=dbcon.src, onclick="removeImg", width="90", height="90")
+      img(id="letter", src=dbcon.src, onclick="removeImg", width="90", height="90")
       p Pronunciation: #{dbcon.pronunciation}
       p Like #{dbcon.pronunciation} in #{dbcon.example}
 
   p <br><br>
+  img(src="images/neo.png", display=block)
   p <h1>Vowels</h1>
   each v in vowels 
     div(id="div").letters
       p #{v.name}
-      img(src=v.src, onclick="removeImg", width="90", height="90")
+      img(id="letter", src=v.src, onclick="removeImg", width="90", height="90")
       p Pronunciation: #{v.pronunciation}
       p Like #{v.pronunciation} in #{v.example}
 
