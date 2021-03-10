@@ -4,14 +4,6 @@ block content
 
   
   p <h1>#{title}</h1>
-  p Note: This page is under construction, not all of its features work yet :)
-
-  //- each chr in characters
-  //-   div(id="div").letters
-  //-     p #{chr.name}
-  //-     img(src=chr.src, onclick="removeImg", width="90", height="90")
-  //-     p Pronunciation: #{chr.pronunciation}
-  //-     p Like #{chr.pronunciation} in #{chr.example}
 
   p <br><br>
   img(id="icon", src="images/jayz.png", display=block)
@@ -19,7 +11,7 @@ block content
   each con in consonants 
     div(id="div").letters
       p #{con.name}
-      img(id="letter", src=con.src, onclick="removeImg", width="90", height="90")
+      img(id="letter", src=con.src, width="90", height="90")
       p Pronunciation: #{con.pronunciation}
       p Like #{con.pronunciation} in #{con.example}
 
@@ -29,7 +21,7 @@ block content
   each dbcon in dbconsonants 
     div(id="div").letters
       p #{dbcon.name}
-      img(id="letter", src=dbcon.src, onclick="removeImg", width="90", height="90")
+      img(id="letter", src=dbcon.src, width="90", height="90")
       p Pronunciation: #{dbcon.pronunciation}
       p Like #{dbcon.pronunciation} in #{dbcon.example}
 
@@ -39,12 +31,7 @@ block content
   each v in vowels 
     div(id="div").letters
       p #{v.name}
-      img(id="letter", src=v.src, onclick="removeImg", width="90", height="90")
+      img(id="letter", src=v.src, width="90", height="90")
       p Pronunciation: #{v.pronunciation}
       p Like #{v.pronunciation} in #{v.example}
 
-  script.
-    function removeImg(){
-      this.style.display = "none";
-    }
-    document.getElementById("div").addEventListener("click", removeImg);		

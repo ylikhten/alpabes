@@ -2,9 +2,10 @@ extends layout
 
 block content
 
-  p #{title}
-  p Type the sound the character makes into the input box and press enter to test your knowledge.
-  p Note: This page is under construction, not all of its features work yet :)
+  p <h1>#{title}</h1>
+  p Type the sound the character makes (i.e. "pronunciation" from the learn page) under the appropriate image below. 
+  p Press enter to test your knowledge!
+  
   div(id="char-display-div")
     each character in characters
       div(class=character.css, id="div-" + character._id)

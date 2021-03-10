@@ -103,9 +103,27 @@ module.exports.learn = function(req, res){
 
 var globalVar = {};
 
+function shuffle(arr) {
+  var m = arr.length, t, i;
+
+  // while there remain elements to shuffle...
+  while(m) {
+    // pick a remaining element...
+    i = Math.floor(Math.random() * m--);
+    
+    // and swap it with the current element
+    t = arr[m];
+    arr[m] = arr[i];
+    arr[i] = t;
+  }
+ 
+  return arr;
+}
+
 var renderPracticePage = function(req, res, globalVar){
+  shuffle(globalVar.allChars);
 	res.render('alphabet-practice', {
-		title: 'Practice Hangul here', 
+		title: 'Practice Hangul', 
 		menu: 'Practice', 
 		characters: globalVar.allChars,	// responseBody from api! wow
     check: globalVar.check,
