@@ -1,78 +1,74 @@
-header {
-	margin: auto;
-	text-align: center;
-	width: 100%;
-}
-
 body {
-  padding: 50px;
+  padding-top: 7px;
+  text-align: center;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #FBFFF1; /*ivory background looks pretty nice*/
   color: #172A3A;
   /* potential color theme: #5F9EA0(Cadet Blue), #172A3A(Prussian Blue), #004346 (Warm Black), #F46036(Portland Orange), aaand #FBFFF1(Ivory) */
 }
 
+header {
+	/*margin: auto;*/
+	/*text-align: center;*/
+	/*width: 100%;*/
+}
+
+.main-content {
+  overflow-x: hidden;
+  /* center main content */
+  margin: 0 auto;
+  width: 93%;
+
+
+}
+
 .container {
-  /*margin: auto;
-  margin-top: 5px;*/
-  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 14px;
   margin-top: 3px;
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  /* cosmetics */
   border-radius: 7px;
   border: 3px solid #5F9EA0;
   background-color: white;
 }
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%,
-  /*-ms-transform: translateY(-50%);*/
-	transform: translateY(-50%);
-}
-
+/*.row {
+  position: relative;
+  z-index: 1;
+}*/
 
 h1 {
   margin: auto;
+  color: #5F9EA0;
+}
+
+.rad {
+  border-radius: 7px;
 }
 
 a {
   text-decoration: none;
   color: #5F9EA0;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 7px 7px 0px 0px;
   border: 2px solid #5F9EA0;
   margin: 5px;
   padding: 3px;
 }
 
 a:hover, a:focus {
-  text-decoration: none;
   color: white;
   background-color: #5F9EA0;
-  border-radius: 5px;
-  border: 2px solid #5F9EA0;
-  margin: 5px;
-  padding: 3px;
 }
 
 a.selected { /*get selected class to appear after button click*/
-  text-decoration: none;
   color: white;
   background-color: #5F9EA0;
-  border-radius: 5px;
+  border-radius: 7px 7px 0px 0px;
   border: 2px solid #5F9EA0;
   margin: 5px;
   padding: 3px;
 
-}
-
-h1
-{
-  color: #5F9EA0;
 }
 
 #letter{
