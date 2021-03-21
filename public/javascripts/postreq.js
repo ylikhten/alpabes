@@ -1,3 +1,5 @@
+//document.getElementsByClassName('.answer-form-class').onfocusout = 
+
 $(function () {
   // refer to the class (.classname) instead of id (#idname) for 
   // forms generated in a for loop.
@@ -21,7 +23,9 @@ $(function () {
       // set css class depending on answer from API
       if (data.correctAnswer) {
         $('#div-' + data.charid).removeClass('letters').addClass('correct'); 
-        $('#answer-' + data.charid).addClass('correct-input').removeClass('incorrect-input');
+        // disable this input after correct answer submitted
+        $('#answer-' + data.charid).prop('disabled', true);;
+        $(this).next().trigger('focus');
       } else {
         $('#div-' + data.charid).removeClass('letters').addClass('incorrect'); 
         $('#answer-' + data.charid).addClass('incorrect-input');
