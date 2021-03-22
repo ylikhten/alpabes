@@ -13,6 +13,10 @@ header {
 	/*width: 100%;*/
 }
 
+p {
+  font-size: 16px;
+}
+
 .main-content {
   overflow-x: hidden;
   /* center main content */
@@ -50,10 +54,12 @@ a {
   text-decoration: none;
   color: #5F9EA0;
   background-color: white;
-  border-radius: 7px 7px 0px 0px;
+  border-radius: 7px 7px 5px 5px;
   border: 2px solid #5F9EA0;
   margin: 5px;
-  padding: 3px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 a:hover, a:focus {
@@ -64,11 +70,7 @@ a:hover, a:focus {
 a.selected { /*get selected class to appear after button click*/
   color: white;
   background-color: #5F9EA0;
-  border-radius: 7px 7px 0px 0px;
   border: 2px solid #5F9EA0;
-  margin: 5px;
-  padding: 3px;
-
 }
 
 #letter{
@@ -77,11 +79,30 @@ a.selected { /*get selected class to appear after button click*/
 }
 
 input{
+  outline: none;
   border-radius: 7px;
   height: 20px;
-  width: 80px;
+  width: 50px;
   border: 2px solid #172A3A;
   text-align: center;
+}
+
+input:focus {
+  border: 2px dashed #172A3A;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0.40;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 input:disabled {
@@ -90,6 +111,7 @@ input:disabled {
   font-weight: bold;
   /* remove blinking text cursor from input field  */
   color: transparent;
+  border: 2px solid #172A3A;
   display: inline-block;
   text-shadow: 0 0 0 #FBFFF1;
 }
@@ -99,10 +121,7 @@ input:disabled {
   text-align: center;
 }
 footer {
-  height: 20px;
-  /*position:absolute;*/
-  bottom:0;
-  right:10px;
+  width: 17%;
 }
 
 /* div.letters */
