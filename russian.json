@@ -1,0 +1,245 @@
+[
+{
+	"name" : "Ah",
+	"pronunciation" : "a",
+	"example" : "falter",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Beh",
+	"pronunciation" : "b",
+	"example" : "balance",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Veh",
+	"pronunciation" : "v",
+	"example" : "valence",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Geh",
+	"pronunciation" : "g",
+	"example" : "gallant",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Deh",
+	"pronunciation" : "d",
+	"example" : "duchess",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Yeh",
+	"pronunciation" : "ye/je",
+	"example" : "yesterday",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Yoh",
+	"pronunciation" : "yo/jo",
+	"example" : "yolo",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Zheh",
+	"pronunciation" : "zh",
+	"example" : "",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name": "Zeh",
+	"pronunciation": "z",
+	"example": "zolo",
+	"src": "",
+	"type" : "Consonant"
+},
+{
+	"name": "Ee",
+	"pronunciation": "ee",
+	"example": "seemingly",
+	"src": "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Y",
+	"pronunciation" : "y/i/j",
+	"example" : "boy",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Kha",
+	"pronunciation" : "k",
+	"example" : "klondike",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "El",
+	"pronunciation" : "l",
+	"example" : "lochness",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Em",
+	"pronunciation" : "m",
+	"example" : "mistaken",
+	"src" : "",
+	"type" : "Consonant"
+},
+
+
+
+
+{
+	"name" : "En",
+	"pronunciation" : "n",
+	"example" : "nero",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Oh",
+	"pronunciation" : "o",
+	"example" : "ordinary",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Peh",
+	"pronunciation" : "p",
+	"example" : "palindrome",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Er",
+	"pronunciation" : "rolled r",
+	"example" : "clear",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Ess",
+	"pronunciation" : "s",
+	"example" : "snarky",
+	"src" : "",
+	"type" : "Consonant"
+},
+
+
+
+
+
+
+
+{
+	"name" : "Teh",
+	"pronunciation" : "t",
+	"example" : "tranquil",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "U",
+	"pronunciation" : "u",
+	"example" : "tube",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Eff",
+	"pronunciation" : "f",
+	"example" : "fantastic",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Ha",
+	"pronunciation" : "kh, h",
+	"example" : "hemophilia",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Tse",
+	"pronunciation" : "Ts, C",
+	"example" : "tsukimoto",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Che",
+	"pronunciation": "Ch",
+	"example" : "chair",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Sha",
+	"pronunciation" : "Sh",
+	"example" : "shawn",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Shya",
+	"pronunciation" : "Shch",
+	"example" : "schrodinger",
+	"src" : "",
+	"type" : "Consonant"
+},
+{
+	"name" : "Hard Sign",
+	"pronunciation" : "\"",
+	"example" : "object",
+	"src" : "",
+	"type" : "Na"
+},
+{
+	"name" : "Y",
+	"pronunciation" : "y",
+	"example" : "flynn",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Soft Sign",
+	"pronunciation" : "\'",
+	"example" : "",
+	"src" : "",
+	"type" : "Na"
+},
+{
+	"name" : "Eh",
+	"pronunciation" : "e",
+	"example" : "element",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Yu",
+	"pronunciation" : "yu/ju",
+	"example" : "universe",
+	"src" : "",
+	"type" : "Vowel"
+},
+{
+	"name" : "Ya",
+	"pronunciation" : "ya/ja",
+	"example" : "yard",
+	"src" : "",
+	"type" : "Vowel"
+}
+
+]
