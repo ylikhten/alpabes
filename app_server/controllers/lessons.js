@@ -25,17 +25,17 @@ module.exports.testpost = function(req, res) {
 /* GET home page */
 module.exports.home = function(req, res){
 	res.render('introduction-page', {
-		title: 'Alpabes--Hangul Practice',
+		title: 'Alpabes--Alphabet Practice',
 		pageHeader: {
 			title: 'Alpabes',
-			strapline: 'Learn and practice Hangul'
+			strapline: 'Learn and practice foreign alphabets'
 		}
 	});
 };
 
 
 
-var renderLearnPage = function(req, res, body){
+var renderLearnPage = function(req, res, body, viewName){
   // first separate each character - consonant, dbconsonant, vowel
   consonants = [];
   dbconsonants = [];
@@ -71,8 +71,8 @@ var renderLearnPage = function(req, res, body){
   vowels.sort(compare);
 
   // send the letters to view
-  res.render('alphabet-learn', {
-    title: 'Learn Hangul',    // these are the variables used in alphabet-learn.jade to display!
+  res.render(viewName, {
+    title: 'Learn alpabet',    // these are the variables used in alphabet-learn.jade to display!
 		menu: 'Learn',
 		// characters: body,
     consonants: consonants,
@@ -83,10 +83,13 @@ var renderLearnPage = function(req, res, body){
 
 };
 
+
+
+
 /* GET 'Learn' page */
-module.exports.learn = function(req, res){
+module.exports.learnHangul = function(req, res){
   var requestOptions, path;
-  path = '/api/learn';
+  path = '/api/learn-hangul';
   requestOptions = {
     url: apiOptions.server + path,
     method: "GET",
@@ -95,10 +98,27 @@ module.exports.learn = function(req, res){
   request (
     requestOptions,
     function(err, response, body){
-      renderLearnPage(req, res, body);
+      renderLearnPage(req, res, body, 'learn-hangul');
     }
   );
 };
+
+module.exports.learnCyrillic = function(req, res){
+  var requestOptions, path;
+  path = '/api/learn-cyrillic';
+  requestOptions = {
+    url: apiOptions.server + path,
+    method: "GET",
+    json: {},
+  };
+  request (
+    requestOptions,
+    function(err, response, body){
+      renderLearnPage(req, res, body, 'learn-cyrillic');
+    }
+  );
+};
+
 
 
 var globalVar = {};
@@ -120,10 +140,10 @@ function shuffle(arr) {
   return arr;
 }
 
-var renderPracticePage = function(req, res, globalVar){
+var renderPracticePage = function(req, res, globalVar, viewPage){
   shuffle(globalVar.allChars);
-	res.render('alphabet-practice', {
-		title: 'Practice Hangul', 
+	res.render(viewPage, {
+		title: 'Practice alphabet', 
 		menu: 'Practice', 
 		characters: globalVar.allChars,	// responseBody from api! wow
     check: globalVar.check,
@@ -133,9 +153,9 @@ var renderPracticePage = function(req, res, globalVar){
 }
 
 /* GET 'Practice' page */
-module.exports.practice = function(req, res){
+module.exports.practiceHangul = function(req, res){
 	var requestOptions, path;
-	path = '/api/learn';	// set path for API request
+	path = '/api/practice-hangul';	// set path for API request
 
 	//set reuqestion options
 	requestOptions = {
@@ -152,7 +172,31 @@ module.exports.practice = function(req, res){
       globalVar.check = '';
       globalVar.charid = '';
       globalVar.answer = '';
-			renderPracticePage(req, res, globalVar);	// pass body returned by the request to renderPracticePage function
+			renderPracticePage(req, res, globalVar, 'practice-hangul');	// pass body returned by the request to renderPracticePage function
+		}
+	);
+};
+
+module.exports.practiceCyrillic = function(req, res){
+	var requestOptions, path;
+	path = '/api/practice-cyrillic';	// set path for API request
+
+	//set reuqestion options
+	requestOptions = {
+		url : apiOptions.server + path,
+		method : "GET",
+		json : {},
+	};
+	// make request, sending through request options
+	request(
+		requestOptions,
+		// supplying callback to render homepage
+		function(err, response, body) {
+      globalVar.allChars = body;
+      globalVar.check = '';
+      globalVar.charid = '';
+      globalVar.answer = '';
+			renderPracticePage(req, res, globalVar, 'practice-cyrillic');	// pass body returned by the request to renderPracticePage function
 		}
 	);
 };

@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+
+  p <h1>#{title}</h1>
+  p Type the sound the character makes (i.e. "pronunciation" from the learn page) under the appropriate image below. 
+  p Press enter to test your knowledge!
+  
+  div(id="char-display-div")
+    each character in characters
+      div(class=character.css, id="div-" + character._id)
+        img(id=character._id, src=character.src, width="90", height="90")
+        br
+        form(id=character._id, class="answer-form-class", data-charid=character._id, role="form")
+          input(type="text", autocomplete="off", id="answer-" + character._id, class="", name="answer", value=(character.css === 'correct' ? character.pronunciation : ""))

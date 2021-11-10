@@ -43,5 +43,5 @@ process.on('SIGTERM', function(){
 	});
 });
 
-require('./korean');
-require('./russian');
+require('./lessons');
+//require('./russian');
